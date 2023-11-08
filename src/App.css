@@ -1,6 +1,38 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* :root {
+  --color-primary: #F2FFE9,
+    --color-two: #A6CF98,
+    --color-tree: #557C55,
+    --color-four: #FA7070,
+    --color-five: #61A3BA,
+    --color-six: #839C80,
+    --color-seven: #FFFFFF,
+    --color-height: #333,
+    --color-nine: #B3A492,
+    --color-ten: #A9A9A9
+} */
+
+/** BANNER */
+
+.box {
+  display: flex;
+  background-color: #B3A492;
+  justify-content: center;
+}
+
+.title {
+  font-size: large;
+  font-weight: 600;
   text-align: center;
+  margin: 10px;
+  color: #FFFFFF;
+}
+
+/** NAVBAR */
+
+.box-nav {
+  background-color: #557C55;
+}
+
+.custom-logo {
+  margin-left: 1rem;
 }
