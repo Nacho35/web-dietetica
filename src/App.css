@@ -1,38 +1,32 @@
-/* :root {
-  --color-primary: #F2FFE9,
-    --color-two: #A6CF98,
-    --color-tree: #557C55,
-    --color-four: #FA7070,
-    --color-five: #61A3BA,
-    --color-six: #839C80,
-    --color-seven: #FFFFFF,
-    --color-height: #333,
-    --color-nine: #B3A492,
-    --color-ten: #A9A9A9
-} */
-
-/** BANNER */
-
-.box {
-  display: flex;
-  background-color: #B3A492;
-  justify-content: center;
+:root {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  z-index: 999;
 }
 
-.title {
-  font-size: large;
-  font-weight: 600;
-  text-align: center;
-  margin: 10px;
-  color: #FFFFFF;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
 }
 
-/** NAVBAR */
-
-.box-nav {
-  background-color: #557C55;
+/** HOME ARROWS CAROUSEL */
+.custom-prev-arrow,
+.custom-next-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
 }
 
-.custom-logo {
-  margin-left: 1rem;
+.custom-prev-arrow {
+  left: 10px;
+}
+
+.custom-next-arrow {
+  right: 10px;
 }

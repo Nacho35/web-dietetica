@@ -1,11 +1,13 @@
-import Banner from './Components/Banner';
-import NavBar from './Components/NavBar';
+import Banner from './components/Banner';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
 
 const index = () => {
 	return (
 		<>
 			<Banner />
-			<NavBar />
+			<Navbar />
+			<Home />
 		</>
 	);
 };

@@ -1,8 +1,9 @@
+import { Container, Title } from '../styles/styledBanner';
 const Banner = () => {
 	return (
-		<div className='box'>
-			<h2 className='title'>FREE SHIPPING ON ORDERS OVER $999</h2>
-		</div>
+		<Container>
+			<Title>FREE SHIPPING ON ORDERS OVER $500</Title>
+		</Container>
 	);
 };
 
