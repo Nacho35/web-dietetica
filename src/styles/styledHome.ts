@@ -3,21 +3,21 @@ import theme from './themes';
 
 export const Container = styled.div`
 	position: relative;
-	width: auto;
+	width: 100%;
 	height: auto;
 	background-size: contain;
 	overflow: hidden;
 `;
 
 export const Item = styled.div`
-	max-height: 80dvh;
+	max-height: 100vh;
 `;
 
 export const Image = styled.img`
 	width: 100%;
-	height: 100%;
-	object-fit: contain;
+	height: auto;
 	background-position: center;
+	background-size: cover;
 	background-repeat: no-repeat;
 `;
 
@@ -61,6 +61,6 @@ export const Title = styled.h3`
 export const Text = styled.p`
 	margin: 15px 0 0;
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.5;
 `;
