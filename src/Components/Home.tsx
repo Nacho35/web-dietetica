@@ -1,8 +1,8 @@
 import Slider, { Settings, CustomArrowProps } from 'react-slick';
-import One from '../assets/frame-ecology-products.webp';
-import Two from '../assets/flatlay-paper-bag-with-fruit-juices.webp';
-import Three from '../assets/ecology-bag-with-cartoon-forks-glasses.webp';
-import Four from '../assets/ecology-bag-with-leaves.webp';
+import One from '../assets/natural-toothbrushes-beauty-health-spa-concept.webp';
+import Two from '../assets/paper-bag-with-fruit-juices.webp';
+import Three from '../assets/ecological-bag-grass.webp';
+import Four from '../assets/ecology-collection-cutlery.webp';
 import '../interfaces/interfaceHome';
 import {
 	Container,
