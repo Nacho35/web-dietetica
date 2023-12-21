@@ -9,10 +9,11 @@ import {
 	Items,
 	Desktop,
 	ContainerLogo,
-	Link,
+	LogoLink,
 	ContainerLinks,
 	Links,
 	InnerContainerDesktop,
+	LogoImage,
 } from '../styles/styledNavbar';
 import '../interfaces/interfaceNavbar';
 import { useState } from 'react';
@@ -75,9 +76,9 @@ const Navbar = () => {
 			<Desktop>
 				<InnerContainerDesktop>
 					<ContainerLogo>
-						<Link href='#'>
-							<img style={{ width: '10%' }} src={Logo} alt='logo' />
-						</Link>
+						<LogoLink href='#'>
+							<LogoImage src={Logo} alt='logo' />
+						</LogoLink>
 					</ContainerLogo>
 					<ContainerLinks>
 						<Links href='#'>About us</Links>

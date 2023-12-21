@@ -77,7 +77,9 @@ export const DrawerContent = styled.div`
 export const Desktop = styled.div`
 	display: none;
 	justify-content: space-between;
+	align-items: center;
 	background-color: ${theme.colors.colorTwo};
+	height: 70px;
 
 	@media only screen and (min-width: 1200px) {
 		display: flex;
@@ -90,34 +92,41 @@ export const Desktop = styled.div`
 
 export const InnerContainerDesktop = styled.div`
 	display: flex;
-	margin: auto;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 `;
 
 export const ContainerLogo = styled.div`
-	display: flex;
-	justify-content: start;
-	align-content: start;
+	align-items: center;
 `;
 
-export const Link = styled.a`
-	display: flex;
-	margin: auto;
+export const LogoLink = styled.a`
+	display: contents;
+`;
+
+export const LogoImage = styled.img`
+	width: 10%;
 `;
 
 export const ContainerLinks = styled.div`
 	display: flex;
+	justify-content: flex-end;
 	align-items: center;
+	flex-grow: 1;
 `;
 
 export const Links = styled.a`
-	margin: 0 30px 0 30px;
+	display: flex;
 	text-decoration: none;
 	font-weight: 600;
 	text-transform: uppercase;
 	color: ${theme.colors.colorFour};
-	cursor: default;
+	cursor: pointer;
+	margin: 0 20px;
+	white-space: nowrap;
 
-	&:hover {
-		cursor: pointer;
+	@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+		margin: 0 20px;
 	}
 `;
