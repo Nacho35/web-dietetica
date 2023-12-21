@@ -3,8 +3,17 @@ import {
 	ContainerGeneral,
 	InnerContainer,
 	ContainerItems,
+	DrawerContainer,
+	DrawerContent,
 	Item,
 	Items,
+	Desktop,
+	ContainerLogo,
+	LogoLink,
+	ContainerLinks,
+	Links,
+	InnerContainerDesktop,
+	LogoImage,
 } from '../styles/styledNavbar';
 import '../interfaces/interfaceNavbar';
 import { useState } from 'react';
@@ -13,7 +22,11 @@ const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const LogoNav: React.FC<LogoNavProps> = ({ src, alt }) => (
-		<img style={{ width: '15%', height: 'auto' }} src={src} alt={alt} />
+		<img
+			style={{ width: '100%', height: 'auto', margin: '-3rem' }}
+			src={src}
+			alt={alt}
+		/>
 	);
 
 	const toggleMenu = () => {
@@ -25,50 +38,57 @@ const Navbar = () => {
 	};
 
 	return (
-		<ContainerGeneral>
-			<InnerContainer>
-				<Item href='#' onClick={closeMenu}>
-					<LogoNav src={Logo} alt='logo' />
-				</Item>
-				<div className='background'>
-					<button className='menu__icon' onClick={toggleMenu}>
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
-				</div>
-				{isMenuOpen && (
-					<ContainerItems>
-						<Items href='#' onClick={closeMenu}>
-							About us
-						</Items>
-						<Items href='#' onClick={closeMenu}>
-							Store
-						</Items>
-						<Items href='#' onClick={closeMenu}>
-							Points of sale
-						</Items>
-						<Items href='#' onClick={closeMenu}>
-							Contact
-						</Items>
-					</ContainerItems>
-				)}
-			</InnerContainer>
-
-			{/* <div>
-				<div>
-					<a href='#'>
-						<img src='' alt='' />
-					</a>
-				</div>
-				<div>
-					<a href='#'>About us</a>
-					<a href='#'>Store</a>
-					<a href='#'>Points of sale</a>
-					<a href='#'>Contact</a>
-				</div>
-			</div> */}
-		</ContainerGeneral>
+		<div>
+			<ContainerGeneral>
+				<InnerContainer>
+					<div className='background'>
+						<button className='menu__icon' onClick={toggleMenu}>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+					{isMenuOpen && (
+						<DrawerContainer>
+							<DrawerContent>
+								<ContainerItems>
+									<Item href='#' onClick={closeMenu}>
+										<LogoNav src={Logo} alt='logo' />
+									</Item>
+									<Items href='#' onClick={closeMenu}>
+										About us
+									</Items>
+									<Items href='#' onClick={closeMenu}>
+										Store
+									</Items>
+									<Items href='#' onClick={closeMenu}>
+										Points of sale
+									</Items>
+									<Items href='#' onClick={closeMenu}>
+										Contact
+									</Items>
+								</ContainerItems>
+							</DrawerContent>
+						</DrawerContainer>
+					)}
+				</InnerContainer>
+			</ContainerGeneral>
+			<Desktop>
+				<InnerContainerDesktop>
+					<ContainerLogo>
+						<LogoLink href='#'>
+							<LogoImage src={Logo} alt='logo' />
+						</LogoLink>
+					</ContainerLogo>
+					<ContainerLinks>
+						<Links href='#'>About us</Links>
+						<Links href='#'>Store</Links>
+						<Links href='#'>Points of sale</Links>
+						<Links href='#'>Contact</Links>
+					</ContainerLinks>
+				</InnerContainerDesktop>
+			</Desktop>
+		</div>
 	);
 };
 export default Navbar;

@@ -5,6 +5,7 @@ export const Container = styled.div`
 	display: flex;
 	background-color: ${theme.colors.colorNine};
 	justify-content: center;
+	cursor: default;
 `;
 
 export const Title = styled.h2`
