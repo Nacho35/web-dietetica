@@ -51,6 +51,10 @@ export const Items = styled.a`
 	font-weight: 600;
 	text-transform: uppercase;
 	color: ${theme.colors.colorFour};
+
+	&:hover {
+		color: ${theme.colors.colorSeven};
+	}
 `;
 
 export const DrawerContainer = styled.div`
@@ -125,6 +129,10 @@ export const Links = styled.a`
 	cursor: pointer;
 	margin: 0 20px;
 	white-space: nowrap;
+
+	&:hover {
+		color: ${theme.colors.colorSeven};
+	}
 
 	@media only screen and (min-width: 1300px) and (max-width: 1400px) {
 		margin: 0 20px;
