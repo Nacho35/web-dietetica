@@ -136,4 +136,5 @@ export const Links = styled.a`
 
 	@media only screen and (min-width: 1300px) and (max-width: 1400px) {
 		margin: 0 20px;
-	};
+	}
+`;

@@ -1,11 +1,11 @@
 import {
-	Container,
-	ContainerTwo,
+	MainContainer,
+	PeopleImageSection,
 	Image,
-	ContainerTree,
+	SustainabilitySection,
 	Info,
-	ContainerFour,
-	ContainerFive,
+	NatureSection,
+	ProductsImageSection,
 	Title,
 } from '../styles/styledAbout';
 import Products from '../assets/close-up-ripe-delicious-vegetables.webp';
@@ -13,8 +13,8 @@ import People from '../assets/husband-wife-shopping-zero-waste-store-looking-hea
 
 const About = () => {
 	return (
-		<Container>
-			<ContainerTree>
+		<MainContainer>
+			<SustainabilitySection>
 				<Title>Commitment to Sustainability</Title>
 				<Info>
 					Welcome to our eco-store, where a commitment to sustainability and the
@@ -26,14 +26,14 @@ const About = () => {
 					choices that allow you to embrace a conscious lifestyle. Join us on
 					this journey toward a greener and healthier world
 				</Info>
-			</ContainerTree>
-			<ContainerTwo>
+			</SustainabilitySection>
+			<PeopleImageSection>
 				<Image src={People} alt='pic' />
-			</ContainerTwo>
-			<ContainerFive>
+			</PeopleImageSection>
+			<ProductsImageSection>
 				<Image src={Products} alt='pic' />
-			</ContainerFive>
-			<ContainerFour>
+			</ProductsImageSection>
+			<NatureSection>
 				<Title>Nature at Its Best</Title>
 				<Info>
 					Discover freshness and authenticity in every corner of our store,
@@ -46,8 +46,8 @@ const About = () => {
 					toward a healthier and more balanced lifestyle. Explore the beauty of
 					the natural world with us!
 				</Info>
-			</ContainerFour>
-		</Container>
+			</NatureSection>
+		</MainContainer>
 	);
 };
 
