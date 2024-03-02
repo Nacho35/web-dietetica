@@ -2,15 +2,24 @@ import styled from 'styled-components';
 import theme from './themes';
 
 export const Container = styled.div`
-	position: relative;
-	width: 100%;
+	width: auto;
 	height: auto;
-	background-size: contain;
-	overflow: hidden;
+	position: relative;
+	@media only screen and (min-width: 768px) {
+	}
+
+	@media only screen and (min-width: 992px) and (min-width: 1024px) {
+	}
+
+	@media only screen and (min-width: 1200px) {
+	}
+
+	@media only screen and (min-width: 1920px) {
+	}
 `;
 
 export const Item = styled.div`
-	max-height: 100vh;
+	position: relative;
 `;
 
 export const Image = styled.img`
@@ -19,17 +28,20 @@ export const Image = styled.img`
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 `;
 
 export const Caption = styled.div`
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: relative;
+	z-index: 1;
+	margin: 1rem auto;
 	text-align: center;
 	color: ${theme.colors.colorHeight};
 	width: 18.75rem;
-	padding: 2rem;
+	padding: 10px;
 	border-radius: 10px;
 	background: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(10px);

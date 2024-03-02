@@ -1,4 +1,4 @@
-import Slider, { Settings, CustomArrowProps } from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import One from '../assets/natural-toothbrushes-beauty-health-spa-concept.webp';
 import Two from '../assets/paper-bag-with-fruit-juices.webp';
 import Three from '../assets/ecological-bag-grass.webp';
@@ -13,28 +13,15 @@ import {
 	Text,
 } from '../styles/styledHome';
 
-const CustomPrevArrow: React.FC<CustomArrowProps> = props => (
-	<div {...props} className='custom-prev-arrow'>
-		<span className='material-symbols-outlined'>arrow_back_ios</span>
-	</div>
-);
-
-const CustomNextArrow: React.FC<CustomArrowProps> = props => (
-	<div {...props} className='custom-next-arrow'>
-		<span className='material-symbols-outlined'>arrow_forward_ios</span>
-	</div>
-);
-
 const Home = () => {
 	const settings: Settings = {
 		dots: false,
 		fade: true,
 		infinite: true,
-		speed: 500,
+		speed: 10000,
+		autoplay: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: <CustomPrevArrow />,
-		nextArrow: <CustomNextArrow />,
 	};
 
 	const slides: Slide[] = [
