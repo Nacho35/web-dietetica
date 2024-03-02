@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect, MouseEvent } from 'react';
 import Logo from '../assets/EcoLife-Market-logo.webp';
 import {
 	ContainerGeneral,
@@ -15,19 +16,10 @@ import {
 	InnerContainerDesktop,
 	LogoImage,
 } from '../styles/styledNavbar';
-import '../interfaces/interfaceNavbar';
-import { useState } from 'react';
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-	const LogoNav: React.FC<LogoNavProps> = ({ src, alt }) => (
-		<img
-			style={{ width: '100%', height: 'auto', margin: '-3rem' }}
-			src={src}
-			alt={alt}
-		/>
-	);
+	const navRef = useRef<HTMLDivElement | null>(null);
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -37,8 +29,21 @@ const Navbar = () => {
 		setIsMenuOpen(false);
 	};
 
+	const handleOutsideClick = (event: MouseEvent) => {
+		if (navRef.current && !navRef.current.contains(event.target as Node)) {
+			closeMenu();
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener('mousedown', handleOutsideClick as any);
+		return () => {
+			document.removeEventListener('mousedown', handleOutsideClick as any);
+		};
+	}, [navRef]);
+
 	return (
-		<div>
+		<div ref={navRef}>
 			<ContainerGeneral>
 				<InnerContainer>
 					<div className='background'>
@@ -53,7 +58,11 @@ const Navbar = () => {
 							<DrawerContent>
 								<ContainerItems>
 									<Item href='#' onClick={closeMenu}>
-										<LogoNav src={Logo} alt='logo' />
+										<img
+											src={Logo}
+											alt='logo'
+											style={{ width: '100%', height: 'auto', margin: '-3rem' }}
+										/>
 									</Item>
 									<Items href='#' onClick={closeMenu}>
 										About us
@@ -91,4 +100,5 @@ const Navbar = () => {
 		</div>
 	);
 };
+
 export default Navbar;
