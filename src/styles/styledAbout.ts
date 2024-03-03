@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import theme from './themes';
 
-export const Container = styled.div`
+export const MainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
-	min-height: 100vh;
+	min-height: 100%;
 	background-image: url('/texture-background.webp');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -16,6 +16,17 @@ export const Container = styled.div`
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto 1fr;
 		padding: 1rem;
+	}
+	@media only screen and (width >= 1024px) {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		padding: 2rem;
+	}
+	@media only screen and (width >= 1200px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
 	}
 `;
 
@@ -29,9 +40,21 @@ export const Title = styled.h2`
 	margin: 1rem 0;
 	padding: 10px;
 	word-break: break-all;
+
+	@media only screen and (width >= 1024px) {
+		font-size: 1.8rem;
+	}
+	@media only screen and (width >= 1200px) {
+		font-size: 2rem;
+		word-break: normal;
+	}
+	@media only screen and (width >= 1920px) {
+		font-size: 2rem;
+		word-break: normal;
+	}
 `;
 
-export const ContainerTwo = styled.div`
+export const PeopleImageSection = styled.div`
 	align-self: center;
 	margin-bottom: 1rem;
 `;
@@ -41,7 +64,7 @@ export const Image = styled.img`
 	border-radius: 10px;
 `;
 
-export const ContainerTree = styled.div`
+export const SustainabilitySection = styled.div`
 	align-content: center;
 	text-align: center;
 	align-items: center;
@@ -56,6 +79,22 @@ export const ContainerTree = styled.div`
 	@media only screen and (width >= 768px) {
 		margin: auto 1rem auto 1rem;
 	}
+	@media only screen and (width >= 900px) {
+		margin: auto 1.5rem auto 1.5rem;
+		width: 90%;
+	}
+	@media only screen and (width >= 1024px) {
+		margin: 1.5rem auto;
+		width: 75%;
+	}
+	@media only screen and (width >= 1200px) {
+		width: 90%;
+		margin: auto;
+	}
+	@media only screen and (width >= 1920px) {
+		width: 80%;
+		margin: auto;
+	}
 `;
 
 export const Info = styled.p`
@@ -65,9 +104,22 @@ export const Info = styled.p`
 	text-align: left;
 	padding: 8px;
 	line-height: 1.5rem;
+
+	@media only screen and (width >= 1024px) {
+		font-size: 1.3rem;
+		line-height: 2rem;
+	}
+	@media only screen and (width >= 1200px) {
+		font-size: 1.3rem;
+		line-height: 2.5rem;
+	}
+	@media only screen and (width >= 1920px) {
+		font-size: 1.3rem;
+		line-height: 2.5rem;
+	}
 `;
 
-export const ContainerFour = styled.div`
+export const NatureSection = styled.div`
 	align-items: center;
 	border-radius: 10px;
 	margin: auto;
@@ -81,8 +133,24 @@ export const ContainerFour = styled.div`
 	@media only screen and (width >= 768px) {
 		margin: auto 1rem auto 1rem;
 	}
+	@media only screen and (width >= 900px) {
+		margin: auto 1.5rem auto 1.5rem;
+		width: 90%;
+	}
+	@media only screen and (width >= 1024px) {
+		margin: 1.5rem auto;
+		width: 75%;
+	}
+	@media only screen and (width >= 1200px) {
+		width: 90%;
+		margin: auto;
+	}
+	@media only screen and (width >= 1920px) {
+		width: 80%;
+		margin: auto;
+	}
 `;
 
-export const ContainerFive = styled.div`
+export const ProductsImageSection = styled.div`
 	align-self: center;
 `;

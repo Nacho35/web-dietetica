@@ -1,6 +1,6 @@
 import Slider, { Settings } from 'react-slick';
-import One from '../assets/natural-toothbrushes-beauty-health-spa-concept.webp';
-import Two from '../assets/paper-bag-with-fruit-juices.webp';
+import One from '../assets/arrangement-spa-beauty-accessories-top-view.webp';
+import Two from '../assets/flatlay-paper-bag-with-fruit-juices.webp';
 import Three from '../assets/ecological-bag-grass.webp';
 import Four from '../assets/ecology-collection-cutlery.webp';
 import '../interfaces/interfaceHome';
@@ -8,6 +8,7 @@ import {
 	Container,
 	Item,
 	Image,
+	ContainerCaption,
 	Caption,
 	Title,
 	Text,
@@ -18,7 +19,7 @@ const Home = () => {
 		dots: false,
 		fade: true,
 		infinite: true,
-		speed: 10000,
+		speed: 8000,
 		autoplay: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -53,10 +54,12 @@ const Home = () => {
 				{slides.map((slide, index) => (
 					<Item key={index}>
 						<Image src={slide.image} alt={slide.title} />
-						<Caption>
-							<Title>{slide.title}</Title>
-							<Text>{slide.text}</Text>
-						</Caption>
+						<ContainerCaption>
+							<Caption>
+								<Title>{slide.title}</Title>
+								<Text>{slide.text}</Text>
+							</Caption>
+						</ContainerCaption>
 					</Item>
 				))}
 			</Slider>
