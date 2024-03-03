@@ -45,11 +45,11 @@ export const Title = styled.h2`
 		font-size: 1.8rem;
 	}
 	@media only screen and (width >= 1200px) {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		word-break: normal;
 	}
 	@media only screen and (width >= 1920px) {
-		font-size: 3rem;
+		font-size: 2rem;
 		word-break: normal;
 	}
 `;
@@ -106,16 +106,16 @@ export const Info = styled.p`
 	line-height: 1.5rem;
 
 	@media only screen and (width >= 1024px) {
-		font-size: 1.5rem;
-		line-height: 2.3rem;
+		font-size: 1.3rem;
+		line-height: 2rem;
 	}
 	@media only screen and (width >= 1200px) {
-		font-size: 1.8rem;
-		line-height: 2.8rem;
+		font-size: 1.3rem;
+		line-height: 2.5rem;
 	}
 	@media only screen and (width >= 1920px) {
-		font-size: 1.5rem;
-		line-height: 3rem;
+		font-size: 1.3rem;
+		line-height: 2.5rem;
 	}
 `;
 
