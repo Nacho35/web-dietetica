@@ -14,6 +14,38 @@ html {
   overflow-x: hidden;
 }
 
+/** ARROWS CAROUSEL */
+
+.arrow-left {
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+
+  @media only screen and (width >=1200px) {
+    display: block;
+    margin-left: 20px;
+  }
+}
+
+.arrow-right {
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+
+  @media only screen and (width >=1200px) {
+    display: block;
+    margin-right: 20px;
+  }
+}
+
 /** BURGER BUTTON */
 
 button {
