@@ -5,11 +5,10 @@ export const MainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
-	min-height: 100%;
-	background-image: url('/texture-background.webp');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	min-height: 100vh;
+	background-image: url('/wood1.webp');
+	object-fit: cover;
+	object-position: center;
 
 	@media only screen and (width >= 768px) {
 		display: grid;

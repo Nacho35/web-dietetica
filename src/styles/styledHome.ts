@@ -21,6 +21,7 @@ export const Image = styled.img`
 	top: 0;
 	left: 0;
 	z-index: -1;
+	filter: brightness(0.7);
 `;
 
 export const ContainerCaption = styled.div`
