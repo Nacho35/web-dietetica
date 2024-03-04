@@ -29,11 +29,13 @@ export const ContainerCaption = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	@media only screen and (width>= 375px) {
-		width: 100%;
-		min-height: 100vh;
-	}
+	min-height: 70vh;
+
 	@media only screen and (width>= 768px) {
+		width: 100%;
+		min-height: 80vh;
+	}
+	@media only screen and (width>= 1024px) {
 		width: 100%;
 		min-height: 100vh;
 	}

@@ -3,6 +3,8 @@ import One from '../assets/arrangement-spa-beauty-accessories-top-view.webp';
 import Two from '../assets/flatlay-paper-bag-with-fruit-juices.webp';
 import Three from '../assets/ecological-bag-grass.webp';
 import Four from '../assets/ecology-collection-cutlery.webp';
+import left from '../assets/nav-arrow-left.svg';
+import right from '../assets/nav-arrow-right.svg';
 import '../interfaces/interfaceHome';
 import {
 	Container,
@@ -14,15 +16,30 @@ import {
 	Text,
 } from '../styles/styledHome';
 
+const NextArrow = (props: any) => (
+	<div className='arrow-left' onClick={props.onClick}>
+		<img src={left} alt='arrow' />
+	</div>
+);
+
+const PrevArrow = (props: any) => (
+	<div className='arrow-right' onClick={props.onClick}>
+		<img src={right} alt='arrow' />
+	</div>
+);
+
 const Home = () => {
 	const settings: Settings = {
 		dots: false,
 		fade: true,
 		infinite: true,
-		speed: 8000,
+		speed: 500,
 		autoplay: true,
+		autoplaySpeed: 6000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		nextArrow: <NextArrow />,
+		prevArrow: <PrevArrow />,
 	};
 
 	const slides: Slide[] = [
