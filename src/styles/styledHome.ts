@@ -15,7 +15,7 @@ export const Item = styled.div`
 
 export const Image = styled.img`
 	width: 100%;
-	min-height: 100dvh;
+	min-height: 100vh;
 	object-fit: cover;
 	position: absolute;
 	top: 0;
@@ -30,11 +30,11 @@ export const ContainerCaption = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	min-height: 70vh;
+	min-height: 50vh;
 
 	@media only screen and (width>= 768px) {
 		width: 100%;
-		min-height: 80vh;
+		min-height: 70vh;
 	}
 	@media only screen and (width>= 1024px) {
 		width: 100%;
