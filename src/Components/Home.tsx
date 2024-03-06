@@ -5,7 +5,7 @@ import Three from '../assets/ecological-bag-grass.webp';
 import Four from '../assets/ecology-collection-cutlery.webp';
 import left from '../assets/nav-arrow-left.svg';
 import right from '../assets/nav-arrow-right.svg';
-import '../interfaces/interfaceHome';
+import { Slide } from '../interfaces/interfaceHome';
 import {
 	Container,
 	Item,
