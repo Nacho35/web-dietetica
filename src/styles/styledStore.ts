@@ -6,7 +6,6 @@ export const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	min-height: 70vh;
 	background-color: ${theme.colors.colorFive};
 `;
 

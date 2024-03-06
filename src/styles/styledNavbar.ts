@@ -5,7 +5,7 @@ export const ContainerGeneral = styled.div`
 	width: auto;
 	display: flex;
 	flex-direction: column;
-	background-color: ${theme.colors.colorTwo};
+	background-color: ${theme.colors.colorTree};
 
 	@media only screen and (min-width: 768px) {
 		display: block;
@@ -50,7 +50,7 @@ export const Items = styled.a`
 	text-decoration: none;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: ${theme.colors.colorFour};
+	color: ${theme.colors.colorNine};
 
 	&:hover {
 		color: ${theme.colors.colorSeven};
@@ -82,7 +82,7 @@ export const Desktop = styled.div`
 	display: none;
 	justify-content: space-between;
 	align-items: center;
-	background-color: ${theme.colors.colorTwo};
+	background-color: ${theme.colors.colorTree};
 	height: 70px;
 
 	@media only screen and (min-width: 1200px) {
@@ -125,7 +125,7 @@ export const Links = styled.a`
 	text-decoration: none;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: ${theme.colors.colorFour};
+	color: ${theme.colors.colorNine};
 	cursor: pointer;
 	margin: 0 20px;
 	white-space: nowrap;

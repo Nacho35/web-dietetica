@@ -5,8 +5,7 @@ export const MainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
-	min-height: 100vh;
-	background-image: url('/wood1.webp');
+	background-image: url('/wood2.webp');
 	object-fit: cover;
 	object-position: center;
 
@@ -16,12 +15,7 @@ export const MainContainer = styled.div`
 		grid-template-rows: auto 1fr;
 		padding: 1rem;
 	}
-	@media only screen and (width >= 1024px) {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: auto;
-		padding: 2rem;
-	}
+
 	@media only screen and (width >= 1200px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -38,18 +32,15 @@ export const Title = styled.h2`
 	margin: auto;
 	margin: 1rem 0;
 	padding: 10px;
-	word-break: break-all;
 
 	@media only screen and (width >= 1024px) {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 	}
 	@media only screen and (width >= 1200px) {
-		font-size: 2rem;
-		word-break: normal;
+		font-size: 1.5rem;
 	}
 	@media only screen and (width >= 1920px) {
-		font-size: 2rem;
-		word-break: normal;
+		font-size: 1.5rem;
 	}
 `;
 
@@ -78,20 +69,16 @@ export const SustainabilitySection = styled.div`
 	@media only screen and (width >= 768px) {
 		margin: auto 1rem auto 1rem;
 	}
-	@media only screen and (width >= 900px) {
-		margin: auto 1.5rem auto 1.5rem;
-		width: 90%;
-	}
 	@media only screen and (width >= 1024px) {
-		margin: 1.5rem auto;
-		width: 75%;
+		margin: auto;
+		width: 90%;
 	}
 	@media only screen and (width >= 1200px) {
 		width: 90%;
 		margin: auto;
 	}
 	@media only screen and (width >= 1920px) {
-		width: 80%;
+		width: 70%;
 		margin: auto;
 	}
 `;
@@ -105,15 +92,15 @@ export const Info = styled.p`
 	line-height: 1.5rem;
 
 	@media only screen and (width >= 1024px) {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		line-height: 2rem;
 	}
 	@media only screen and (width >= 1200px) {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		line-height: 2.5rem;
 	}
 	@media only screen and (width >= 1920px) {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		line-height: 2.5rem;
 	}
 `;
@@ -132,20 +119,16 @@ export const NatureSection = styled.div`
 	@media only screen and (width >= 768px) {
 		margin: auto 1rem auto 1rem;
 	}
-	@media only screen and (width >= 900px) {
-		margin: auto 1.5rem auto 1.5rem;
-		width: 90%;
-	}
 	@media only screen and (width >= 1024px) {
-		margin: 1.5rem auto;
-		width: 75%;
+		margin: auto;
+		width: 90%;
 	}
 	@media only screen and (width >= 1200px) {
 		width: 90%;
 		margin: auto;
 	}
 	@media only screen and (width >= 1920px) {
-		width: 80%;
+		width: 70%;
 		margin: auto;
 	}
 `;
