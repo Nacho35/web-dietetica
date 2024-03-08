@@ -50,10 +50,10 @@ export const Items = styled.a`
 	text-decoration: none;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: ${theme.colors.colorNine};
+	color: ${theme.colors.colorHeight};
 
 	&:hover {
-		color: ${theme.colors.colorSeven};
+		color: ${theme.colors.colorOne};
 	}
 `;
 
@@ -125,13 +125,13 @@ export const Links = styled.a`
 	text-decoration: none;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: ${theme.colors.colorNine};
+	color: ${theme.colors.colorHeight};
 	cursor: pointer;
 	margin: 0 20px;
 	white-space: nowrap;
 
 	&:hover {
-		color: ${theme.colors.colorSeven};
+		color: ${theme.colors.colorOne};
 	}
 
 	@media only screen and (min-width: 1300px) and (max-width: 1400px) {

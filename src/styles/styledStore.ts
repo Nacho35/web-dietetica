@@ -9,15 +9,23 @@ export const Container = styled.div`
 	background-color: ${theme.colors.colorFive};
 `;
 
+export const ContainerTitle = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 1.5rem;
+`;
+
 export const PrimaryTitle = styled.h2`
 	text-transform: uppercase;
 	text-align: center;
 	align-self: center;
-	padding: 2rem;
+	padding: 1.5rem;
 	font-size: 20px;
 	border-radius: 10px;
-	width: fit-content;
-	border-radius: 100px 10px;
 	background: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(10px);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

@@ -5,7 +5,7 @@ export const MainContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
-	background-image: url('/wood2.webp');
+	background-color: ${theme.colors.colorTwo};
 	object-fit: cover;
 	object-position: center;
 
