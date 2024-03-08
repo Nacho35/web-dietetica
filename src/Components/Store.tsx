@@ -11,6 +11,7 @@ import {
 	DescriptionOverlay,
 	Button,
 	ContainerBTN,
+	ContainerTitle,
 } from '../styles/styledStore.ts';
 import fruits from '../assets/fruits.webp';
 import eco from '../assets/eco.webp';
@@ -100,7 +101,9 @@ const Store = () => {
 
 	return (
 		<Container>
-			<PrimaryTitle>Earth's Bounty: Organic Wonders Await</PrimaryTitle>
+			<ContainerTitle>
+				<PrimaryTitle>Earth's Bounty: Organic Wonders Await</PrimaryTitle>
+			</ContainerTitle>
 			<GlobalContainer>
 				<Slider {...settings}>
 					{slides.map((slide, index) => (
