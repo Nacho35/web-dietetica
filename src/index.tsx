@@ -5,6 +5,7 @@ import Navbar from './components/NavBar';
 import PointSale from './components/PointSale';
 import SecondBanner from './components/SecondBanner';
 import Store from './components/Store';
+import ZeroWaste from './components/ZeroWaste';
 
 const index = () => {
 	return (
@@ -16,6 +17,7 @@ const index = () => {
 			<SecondBanner />
 			<Store />
 			<PointSale />
+			<ZeroWaste />
 		</>
 	);
 };
