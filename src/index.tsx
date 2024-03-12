@@ -1,5 +1,6 @@
 import About from './components/About';
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import Navbar from './components/NavBar';
 import PointSale from './components/PointSale';
@@ -18,6 +19,7 @@ const index = () => {
 			<Store />
 			<PointSale />
 			<ZeroWaste />
+			<Footer />
 		</>
 	);
 };
