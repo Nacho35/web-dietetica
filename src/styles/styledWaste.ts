@@ -24,7 +24,7 @@ export const InfoContainer = styled.div`
 		width: 70%;
 	}
 	@media only screen and (width >= 1200px) {
-		width: fit-content;
+		width: 50%;
 	}
 `;
 
@@ -43,7 +43,7 @@ export const Text = styled.p`
 	font-weight: 600;
 	line-height: 1.5;
 	color: ${theme.colors.colorHeight};
-	margin: 10px;
+	margin: auto 1rem auto 1rem;
 `;
 
 export const ImageContainer = styled.div`
