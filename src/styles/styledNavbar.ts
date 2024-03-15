@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from './themes';
+import { Link as ScrollLink } from 'react-scroll';
 
 export const ContainerGeneral = styled.div`
 	width: auto;
@@ -30,7 +31,7 @@ export const InnerContainer = styled.div`
 	padding: 0.5rem;
 `;
 
-export const Item = styled.a`
+export const Item = styled(ScrollLink)`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -45,7 +46,7 @@ export const ContainerItems = styled.div`
 	justify-content: start;
 `;
 
-export const Items = styled.a`
+export const Items = styled(ScrollLink)`
 	margin: 30px 0 30px 0;
 	text-decoration: none;
 	font-weight: 600;
@@ -105,8 +106,9 @@ export const ContainerLogo = styled.div`
 	align-items: center;
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled(ScrollLink)`
 	display: contents;
+	cursor: pointer;
 `;
 
 export const LogoImage = styled.img`
@@ -120,7 +122,7 @@ export const ContainerLinks = styled.div`
 	flex-grow: 1;
 `;
 
-export const Links = styled.a`
+export const Links = styled(ScrollLink)`
 	display: flex;
 	text-decoration: none;
 	font-weight: 600;

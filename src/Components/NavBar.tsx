@@ -57,23 +57,58 @@ const Navbar = () => {
 						<DrawerContainer>
 							<DrawerContent>
 								<ContainerItems>
-									<Item href='#' onClick={closeMenu}>
+									<Item
+										to='/home'
+										spy={true}
+										smooth={true}
+										offset={75}
+										duration={3500}
+										onClick={closeMenu}
+									>
 										<img
 											src={Logo}
 											alt='logo'
 											style={{ width: '100%', height: 'auto', margin: '-3rem' }}
 										/>
 									</Item>
-									<Items href='#' onClick={closeMenu}>
+									<Items
+										to='about'
+										spy={true}
+										smooth={true}
+										offset={75}
+										duration={3500}
+										onClick={closeMenu}
+									>
 										About us
 									</Items>
-									<Items href='#' onClick={closeMenu}>
+									<Items
+										to='store'
+										spy={true}
+										smooth={true}
+										offset={75}
+										duration={3500}
+										onClick={closeMenu}
+									>
 										Store
 									</Items>
-									<Items href='#' onClick={closeMenu}>
+									<Items
+										to='pointSale'
+										spy={true}
+										smooth={true}
+										offset={75}
+										duration={3500}
+										onClick={closeMenu}
+									>
 										Points of sale
 									</Items>
-									<Items href='#' onClick={closeMenu}>
+									<Items
+										to='contact'
+										spy={true}
+										smooth={true}
+										offset={75}
+										duration={3500}
+										onClick={closeMenu}
+									>
 										Contact
 									</Items>
 								</ContainerItems>
@@ -85,15 +120,53 @@ const Navbar = () => {
 			<Desktop>
 				<InnerContainerDesktop>
 					<ContainerLogo>
-						<LogoLink href='#'>
+						<LogoLink
+							to='/home'
+							spy={true}
+							smooth={true}
+							offset={75}
+							duration={3500}
+						>
 							<LogoImage src={Logo} alt='logo' />
 						</LogoLink>
 					</ContainerLogo>
 					<ContainerLinks>
-						<Links href='#'>About us</Links>
-						<Links href='#'>Store</Links>
-						<Links href='#'>Points of sale</Links>
-						<Links href='#'>Contact</Links>
+						<Links
+							to='about'
+							spy={true}
+							smooth={true}
+							offset={75}
+							duration={3500}
+						>
+							About us
+						</Links>
+						<Links
+							to='store'
+							spy={true}
+							smooth={true}
+							offset={75}
+							duration={3500}
+						>
+							Store
+						</Links>
+						<Links
+							to='pointsale'
+							spy={true}
+							smooth={true}
+							offset={75}
+							duration={3500}
+						>
+							Points of sale
+						</Links>
+						<Links
+							to='contact'
+							spy={true}
+							smooth={true}
+							offset={75}
+							duration={3500}
+						>
+							Contact
+						</Links>
 					</ContainerLinks>
 				</InnerContainerDesktop>
 			</Desktop>
@@ -102,3 +175,9 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// TODO //
+
+//! revisar el logo del menu ya que no va a nada //
+//! revisar el offset de los links //
+//! agregar rutas a los botones que faltan //

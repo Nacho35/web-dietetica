@@ -20,9 +20,9 @@ import {
 import insta from '../assets/instagram-svgrepo-com.svg';
 import face from '../assets/facebook-svgrepo-com.svg';
 
-const Footer = () => {
+const Footer = ({ id = 'contact' }) => {
 	return (
-		<FooterContainer>
+		<FooterContainer id={id}>
 			<InfoContainer>
 				<SectionContainer>
 					<MainTitle>Ecolife Market</MainTitle>

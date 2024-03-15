@@ -34,7 +34,7 @@ const PrevArrow = (props: any) => (
 	</div>
 );
 
-const Store = () => {
+const Store = ({ id = 'store' }) => {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
 	const settings = {
@@ -100,7 +100,7 @@ const Store = () => {
 	];
 
 	return (
-		<Container>
+		<Container id={id}>
 			<ContainerTitle>
 				<PrimaryTitle>Earth's Bounty: Organic Wonders Await</PrimaryTitle>
 			</ContainerTitle>

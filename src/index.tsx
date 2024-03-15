@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import About from './components/About';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
@@ -10,7 +11,7 @@ import ZeroWaste from './components/ZeroWaste';
 
 const index = () => {
 	return (
-		<>
+		<Fragment>
 			<Banner />
 			<Navbar />
 			<Home />
@@ -20,7 +21,7 @@ const index = () => {
 			<PointSale />
 			<ZeroWaste />
 			<Footer />
-		</>
+		</Fragment>
 	);
 };
 

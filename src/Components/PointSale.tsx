@@ -9,7 +9,7 @@ import {
 	SecondText,
 } from '../styles/styledPointSale';
 
-const PointSale = () => {
+const PointSale = ({ id = 'pointsale' }) => {
 	const saleLocations = [
 		{
 			id: 1,
@@ -35,7 +35,7 @@ const PointSale = () => {
 	];
 
 	return (
-		<MainContainer>
+		<MainContainer id={id}>
 			<InnerContainer>
 				<Header>Point of Sale</Header>
 				<Text>
