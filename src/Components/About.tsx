@@ -11,9 +11,9 @@ import {
 import Products from '../assets/close-up-ripe-delicious-vegetables.webp';
 import People from '../assets/husband-wife-shopping-zero-waste-store-looking-healthy-locally-sourced-bulk-products-green-living-couple-purchasing-pantry-staples-from-local-neighborhood-shop.webp';
 
-const About = () => {
+const About = ({ id = 'about' }) => {
 	return (
-		<MainContainer>
+		<MainContainer id={id}>
 			<SustainabilitySection>
 				<Title>Commitment to Sustainability</Title>
 				<Info>

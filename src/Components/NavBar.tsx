@@ -57,23 +57,68 @@ const Navbar = () => {
 						<DrawerContainer>
 							<DrawerContent>
 								<ContainerItems>
-									<Item href='#' onClick={closeMenu}>
+									<Item
+										to='home'
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={2000}
+										onClick={closeMenu}
+									>
 										<img
 											src={Logo}
 											alt='logo'
 											style={{ width: '100%', height: 'auto', margin: '-3rem' }}
 										/>
 									</Item>
-									<Items href='#' onClick={closeMenu}>
+									<Items
+										to='about'
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={2000}
+										onClick={closeMenu}
+									>
 										About us
 									</Items>
-									<Items href='#' onClick={closeMenu}>
+									<Items
+										to='store'
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={2000}
+										onClick={closeMenu}
+									>
 										Store
 									</Items>
-									<Items href='#' onClick={closeMenu}>
+									<Items
+										to='pointsale'
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={2000}
+										onClick={closeMenu}
+									>
 										Points of sale
 									</Items>
-									<Items href='#' onClick={closeMenu}>
+									<Items
+										to='trust'
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={2000}
+										onClick={closeMenu}
+									>
+										Trust
+									</Items>
+									<Items
+										to='contact'
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={2000}
+										onClick={closeMenu}
+									>
 										Contact
 									</Items>
 								</ContainerItems>
@@ -85,15 +130,62 @@ const Navbar = () => {
 			<Desktop>
 				<InnerContainerDesktop>
 					<ContainerLogo>
-						<LogoLink href='#'>
+						<LogoLink
+							to='home'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
 							<LogoImage src={Logo} alt='logo' />
 						</LogoLink>
 					</ContainerLogo>
 					<ContainerLinks>
-						<Links href='#'>About us</Links>
-						<Links href='#'>Store</Links>
-						<Links href='#'>Points of sale</Links>
-						<Links href='#'>Contact</Links>
+						<Links
+							to='about'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							About us
+						</Links>
+						<Links
+							to='store'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Store
+						</Links>
+						<Links
+							to='pointsale'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Points of sale
+						</Links>
+						<Links
+							to='trust'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Trust
+						</Links>
+						<Links
+							to='contact'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Contact
+						</Links>
 					</ContainerLinks>
 				</InnerContainerDesktop>
 			</Desktop>

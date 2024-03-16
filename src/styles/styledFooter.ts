@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from './themes';
+import { Link as ScrollLink } from 'react-scroll';
 
 export const FooterContainer = styled.footer`
 	display: flex;
@@ -52,12 +53,13 @@ export const NavLinkContainer = styled.div`
 	flex-direction: column;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(ScrollLink)`
 	margin: 1rem;
 	text-decoration: none;
 	color: ${theme.colors.colorHeight};
 	font-weight: 600;
 	font-size: 1.1rem;
+	cursor: pointer;
 
 	&:hover {
 		text-decoration: underline;

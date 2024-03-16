@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from './themes';
+import { NavLink } from 'react-router-dom';
 
 export const MainContainer = styled.div`
 	display: flex;
@@ -24,7 +25,7 @@ export const InfoContainer = styled.div`
 		width: 70%;
 	}
 	@media only screen and (width >= 1200px) {
-		width: fit-content;
+		width: 50%;
 	}
 `;
 
@@ -43,7 +44,7 @@ export const Text = styled.p`
 	font-weight: 600;
 	line-height: 1.5;
 	color: ${theme.colors.colorHeight};
-	margin: 10px;
+	margin: auto 1rem auto 1rem;
 `;
 
 export const ImageContainer = styled.div`
@@ -111,7 +112,7 @@ export const ContainerBtn = styled.div`
 	align-items: center;
 `;
 
-export const Btn = styled.button`
+export const Btn = styled(NavLink)`
 	margin: auto;
 	text-transform: capitalize;
 	width: fit-content;

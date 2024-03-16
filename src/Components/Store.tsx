@@ -21,6 +21,7 @@ import bags from '../assets/bags.webp';
 import { Slides } from '../interfaces/interfaceStore';
 import left from '../assets/nav-arrow-left.svg';
 import right from '../assets/nav-arrow-right.svg';
+import { NavLink } from 'react-router-dom';
 
 const NextArrow = (props: any) => (
 	<div className='arrow-left' onClick={props.onClick}>
@@ -34,7 +35,7 @@ const PrevArrow = (props: any) => (
 	</div>
 );
 
-const Store = () => {
+const Store = ({ id = 'store' }) => {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
 	const settings = {
@@ -100,7 +101,7 @@ const Store = () => {
 	];
 
 	return (
-		<Container>
+		<Container id={id}>
 			<ContainerTitle>
 				<PrimaryTitle>Earth's Bounty: Organic Wonders Await</PrimaryTitle>
 			</ContainerTitle>
@@ -125,7 +126,9 @@ const Store = () => {
 				</Slider>
 			</GlobalContainer>
 			<ContainerBTN>
-				<Button>see products</Button>
+				<Button as={NavLink} to='/products'>
+					see products
+				</Button>
 			</ContainerBTN>
 		</Container>
 	);

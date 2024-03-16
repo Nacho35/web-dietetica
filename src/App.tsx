@@ -1,11 +1,7 @@
-import Index from './index';
+import RouterIndex from './routes/RouterIndex';
 
 const App = () => {
-	return (
-		<>
-			<Index />
-		</>
-	);
+	return <RouterIndex />;
 };
 
 export default App;

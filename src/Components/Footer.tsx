@@ -20,17 +20,49 @@ import {
 import insta from '../assets/instagram-svgrepo-com.svg';
 import face from '../assets/facebook-svgrepo-com.svg';
 
-const Footer = () => {
+const Footer = ({ id = 'contact' }) => {
 	return (
-		<FooterContainer>
+		<FooterContainer id={id}>
 			<InfoContainer>
 				<SectionContainer>
 					<MainTitle>Ecolife Market</MainTitle>
 					<NavLinkContainer>
-						<NavLink href=''>About us</NavLink>
-						<NavLink href=''>Store</NavLink>
-						<NavLink href=''>Point of sale</NavLink>
-						<NavLink href=''>Contact</NavLink>
+						<NavLink
+							to='about'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							About us
+						</NavLink>
+						<NavLink
+							to='store'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Store
+						</NavLink>
+						<NavLink
+							to='pointsale'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Point of sale
+						</NavLink>
+						<NavLink
+							to='trust'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Trust
+						</NavLink>
 					</NavLinkContainer>
 				</SectionContainer>
 				<SectionContainer>
