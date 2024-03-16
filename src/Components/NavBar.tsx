@@ -58,11 +58,11 @@ const Navbar = () => {
 							<DrawerContent>
 								<ContainerItems>
 									<Item
-										to='/home'
+										to='home'
 										spy={true}
 										smooth={true}
-										offset={75}
-										duration={3500}
+										offset={0}
+										duration={2000}
 										onClick={closeMenu}
 									>
 										<img
@@ -75,8 +75,8 @@ const Navbar = () => {
 										to='about'
 										spy={true}
 										smooth={true}
-										offset={75}
-										duration={3500}
+										offset={0}
+										duration={2000}
 										onClick={closeMenu}
 									>
 										About us
@@ -85,28 +85,38 @@ const Navbar = () => {
 										to='store'
 										spy={true}
 										smooth={true}
-										offset={75}
-										duration={3500}
+										offset={0}
+										duration={2000}
 										onClick={closeMenu}
 									>
 										Store
 									</Items>
 									<Items
-										to='pointSale'
+										to='pointsale'
 										spy={true}
 										smooth={true}
-										offset={75}
-										duration={3500}
+										offset={0}
+										duration={2000}
 										onClick={closeMenu}
 									>
 										Points of sale
 									</Items>
 									<Items
+										to='trust'
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={2000}
+										onClick={closeMenu}
+									>
+										Trust
+									</Items>
+									<Items
 										to='contact'
 										spy={true}
 										smooth={true}
-										offset={75}
-										duration={3500}
+										offset={0}
+										duration={2000}
 										onClick={closeMenu}
 									>
 										Contact
@@ -121,11 +131,11 @@ const Navbar = () => {
 				<InnerContainerDesktop>
 					<ContainerLogo>
 						<LogoLink
-							to='/home'
+							to='home'
 							spy={true}
 							smooth={true}
-							offset={75}
-							duration={3500}
+							offset={0}
+							duration={2000}
 						>
 							<LogoImage src={Logo} alt='logo' />
 						</LogoLink>
@@ -135,8 +145,8 @@ const Navbar = () => {
 							to='about'
 							spy={true}
 							smooth={true}
-							offset={75}
-							duration={3500}
+							offset={0}
+							duration={2000}
 						>
 							About us
 						</Links>
@@ -144,8 +154,8 @@ const Navbar = () => {
 							to='store'
 							spy={true}
 							smooth={true}
-							offset={75}
-							duration={3500}
+							offset={0}
+							duration={2000}
 						>
 							Store
 						</Links>
@@ -153,17 +163,26 @@ const Navbar = () => {
 							to='pointsale'
 							spy={true}
 							smooth={true}
-							offset={75}
-							duration={3500}
+							offset={0}
+							duration={2000}
 						>
 							Points of sale
+						</Links>
+						<Links
+							to='trust'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Trust
 						</Links>
 						<Links
 							to='contact'
 							spy={true}
 							smooth={true}
-							offset={75}
-							duration={3500}
+							offset={0}
+							duration={2000}
 						>
 							Contact
 						</Links>
@@ -175,9 +194,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// TODO //
-
-//! revisar el logo del menu ya que no va a nada //
-//! revisar el offset de los links //
-//! agregar rutas a los botones que faltan //

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from './themes';
+import { NavLink } from 'react-router-dom';
 
 export const MainContainer = styled.div`
 	display: flex;
@@ -111,7 +112,7 @@ export const ContainerBtn = styled.div`
 	align-items: center;
 `;
 
-export const Btn = styled.button`
+export const Btn = styled(NavLink)`
 	margin: auto;
 	text-transform: capitalize;
 	width: fit-content;

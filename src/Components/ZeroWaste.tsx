@@ -12,10 +12,11 @@ import {
 	Divider,
 } from '../styles/styledWaste';
 import waste from '../assets/zero-waste.webp';
+import { NavLink } from 'react-router-dom';
 
-const ZeroWaste = () => {
+const ZeroWaste = ({ id = 'trust' }) => {
 	return (
-		<MainContainer>
+		<MainContainer id={id}>
 			<InfoContainer>
 				<Title>Why Trust Us?</Title>
 				<Text>
@@ -42,7 +43,9 @@ const ZeroWaste = () => {
 				</Quote>
 			</ContainerQuote>
 			<ContainerBtn>
-				<Btn>What is zero waste?</Btn>
+				<Btn as={NavLink} to='/waste'>
+					What is zero waste?
+				</Btn>
 			</ContainerBtn>
 		</MainContainer>
 	);

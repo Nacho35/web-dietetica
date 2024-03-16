@@ -21,6 +21,7 @@ import bags from '../assets/bags.webp';
 import { Slides } from '../interfaces/interfaceStore';
 import left from '../assets/nav-arrow-left.svg';
 import right from '../assets/nav-arrow-right.svg';
+import { NavLink } from 'react-router-dom';
 
 const NextArrow = (props: any) => (
 	<div className='arrow-left' onClick={props.onClick}>
@@ -125,7 +126,9 @@ const Store = ({ id = 'store' }) => {
 				</Slider>
 			</GlobalContainer>
 			<ContainerBTN>
-				<Button>see products</Button>
+				<Button as={NavLink} to='/products'>
+					see products
+				</Button>
 			</ContainerBTN>
 		</Container>
 	);

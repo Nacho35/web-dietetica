@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from './themes';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
 	display: flex;
@@ -80,7 +81,7 @@ export const DescriptionOverlay = styled.div`
 	}
 `;
 
-export const Button = styled.button`
+export const Button = styled(NavLink)`
 	margin: auto;
 	text-transform: capitalize;
 	width: fit-content;
