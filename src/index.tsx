@@ -18,8 +18,8 @@ const index = () => {
 			<About />
 			<SecondBanner />
 			<Store />
-			<PointSale />
 			<ZeroWaste />
+			<PointSale />
 			<Footer />
 		</Fragment>
 	);

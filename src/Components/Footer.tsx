@@ -46,15 +46,6 @@ const Footer = ({ id = 'contact' }) => {
 							Store
 						</NavLink>
 						<NavLink
-							to='pointsale'
-							spy={true}
-							smooth={true}
-							offset={0}
-							duration={2000}
-						>
-							Point of sale
-						</NavLink>
-						<NavLink
 							to='trust'
 							spy={true}
 							smooth={true}
@@ -62,6 +53,15 @@ const Footer = ({ id = 'contact' }) => {
 							duration={2000}
 						>
 							Trust
+						</NavLink>
+						<NavLink
+							to='pointsale'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Point of sale
 						</NavLink>
 					</NavLinkContainer>
 				</SectionContainer>

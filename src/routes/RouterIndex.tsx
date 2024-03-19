@@ -4,22 +4,23 @@ import About from '../components/About';
 import Footer from '../components/Footer';
 import PointSale from '../components/PointSale';
 import Store from '../components/Store';
-import Home from '../components/Home';
 import ZeroWaste from '../components/ZeroWaste';
+import InfoWaste from '../components/InfoWaste';
+import ScrollToTop from '../components/ScrollRoute';
 
-// TODO crear los componentes para las dos rutas faltantes //
+// TODO crear el componente para la ruta faltante //
 const RouterIndex = () => {
 	return (
 		<BrowserRouter>
+			<ScrollToTop />
 			<Routes>
 				<Route path='/' element={<Index />} />
-				<Route path='/home' element={<Home />} />
 				<Route path='/about' element={<About />} />
 				<Route path='/store' element={<Store />} />
 				<Route path='/pointsale' element={<PointSale />} />
 				<Route path='/trust' element={<ZeroWaste />} />
 				<Route path='/contact' element={<Footer />} />
-				{/* <Route path='/waste' element={< />} /> */}
+				<Route path='/waste' element={<InfoWaste />} />
 				{/* <Route path='/products' element={< />} /> */}
 				<Route path='*' element={<Navigate to='/' />} />
 			</Routes>

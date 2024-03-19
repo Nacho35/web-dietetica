@@ -28,7 +28,7 @@ const PrevArrow = (props: any) => (
 	</div>
 );
 
-const Home = ({ id = 'home' }) => {
+const Home = () => {
 	const settings: Settings = {
 		dots: false,
 		fade: true,
@@ -66,7 +66,7 @@ const Home = ({ id = 'home' }) => {
 	];
 
 	return (
-		<Container id={id}>
+		<Container>
 			<Slider {...settings}>
 				{slides.map((slide, index) => (
 					<Item key={index}>
