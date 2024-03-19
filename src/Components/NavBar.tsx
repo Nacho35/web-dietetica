@@ -58,12 +58,11 @@ const Navbar = () => {
 							<DrawerContent>
 								<ContainerItems>
 									<Item
-										to='home'
-										spy={true}
-										smooth={true}
-										offset={0}
-										duration={2000}
-										onClick={closeMenu}
+										onClick={() => {
+											window.scrollTo(0, 0);
+											window.location.reload();
+											closeMenu();
+										}}
 									>
 										<img
 											src={Logo}
@@ -92,16 +91,6 @@ const Navbar = () => {
 										Store
 									</Items>
 									<Items
-										to='pointsale'
-										spy={true}
-										smooth={true}
-										offset={0}
-										duration={2000}
-										onClick={closeMenu}
-									>
-										Points of sale
-									</Items>
-									<Items
 										to='trust'
 										spy={true}
 										smooth={true}
@@ -110,6 +99,16 @@ const Navbar = () => {
 										onClick={closeMenu}
 									>
 										Trust
+									</Items>
+									<Items
+										to='pointsale'
+										spy={true}
+										smooth={true}
+										offset={0}
+										duration={2000}
+										onClick={closeMenu}
+									>
+										Points of sale
 									</Items>
 									<Items
 										to='contact'
@@ -131,11 +130,10 @@ const Navbar = () => {
 				<InnerContainerDesktop>
 					<ContainerLogo>
 						<LogoLink
-							to='home'
-							spy={true}
-							smooth={true}
-							offset={0}
-							duration={2000}
+							onClick={() => {
+								window.scrollTo(0, 0);
+								window.location.reload();
+							}}
 						>
 							<LogoImage src={Logo} alt='logo' />
 						</LogoLink>
@@ -160,15 +158,6 @@ const Navbar = () => {
 							Store
 						</Links>
 						<Links
-							to='pointsale'
-							spy={true}
-							smooth={true}
-							offset={0}
-							duration={2000}
-						>
-							Points of sale
-						</Links>
-						<Links
 							to='trust'
 							spy={true}
 							smooth={true}
@@ -176,6 +165,15 @@ const Navbar = () => {
 							duration={2000}
 						>
 							Trust
+						</Links>
+						<Links
+							to='pointsale'
+							spy={true}
+							smooth={true}
+							offset={0}
+							duration={2000}
+						>
+							Points of sale
 						</Links>
 						<Links
 							to='contact'

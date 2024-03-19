@@ -90,18 +90,20 @@ export const Quote = styled.p`
 	}
 
 	@media only screen and (width >= 1024px) {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		padding: 2rem;
+		width: 30rem;
 	}
 
 	@media only screen and (width >= 1200px) {
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 		padding: 3rem;
+		width: 40rem;
 	}
 
 	@media only screen and (width >= 1920px) {
-		font-size: 1.8rem;
-		padding: 4rem;
+		width: 46rem;
+		padding: 3.5rem;
 	}
 `;
 

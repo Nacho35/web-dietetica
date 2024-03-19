@@ -44,8 +44,8 @@ const Store = ({ id = 'store' }) => {
 		speed: 500,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		nextArrow: <NextArrow />,
-		prevArrow: <PrevArrow />,
+		nextArrow: <PrevArrow />,
+		prevArrow: <NextArrow />,
 		responsive: [
 			{
 				breakpoint: 1200,
