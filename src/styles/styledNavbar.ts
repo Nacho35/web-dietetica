@@ -31,7 +31,7 @@ export const InnerContainer = styled.div`
 	padding: 0.5rem;
 `;
 
-export const Item = styled.a`
+export const Item = styled(ScrollLink)`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -106,7 +106,7 @@ export const ContainerLogo = styled.div`
 	align-items: center;
 `;
 
-export const LogoLink = styled.a`
+export const LogoLink = styled(ScrollLink)`
 	display: contents;
 	cursor: pointer;
 `;
