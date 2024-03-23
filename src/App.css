@@ -104,3 +104,21 @@ button {
   background-color: #333;
   transform: translateY(-11px) rotate(45deg);
 }
+
+/** FOOTER CUSTOM */
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @media only screen and (width >=768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-left: 1rex;
+    margin-right: 1rem;
+  }
+}
