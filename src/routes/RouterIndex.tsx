@@ -7,8 +7,8 @@ import Store from '../components/Store';
 import ZeroWaste from '../components/ZeroWaste';
 import InfoWaste from '../components/InfoWaste';
 import ScrollToTop from '../components/ScrollRoute';
+import Products from '../components/Products';
 
-// TODO crear el componente para la ruta faltante //
 const RouterIndex = () => {
 	return (
 		<BrowserRouter>
@@ -21,7 +21,7 @@ const RouterIndex = () => {
 				<Route path='/trust' element={<ZeroWaste />} />
 				<Route path='/contact' element={<Footer />} />
 				<Route path='/waste' element={<InfoWaste />} />
-				{/* <Route path='/products' element={< />} /> */}
+				<Route path='/products' element={<Products />} />
 				<Route path='*' element={<Navigate to='/' />} />
 			</Routes>
 		</BrowserRouter>
