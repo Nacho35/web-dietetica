@@ -58,6 +58,7 @@ const Navbar = () => {
 							<DrawerContent>
 								<ContainerItems>
 									<Item
+										to='/'
 										onClick={() => {
 											window.scrollTo(0, 0);
 											window.location.reload();
@@ -130,6 +131,7 @@ const Navbar = () => {
 				<InnerContainerDesktop>
 					<ContainerLogo>
 						<LogoLink
+							to='/'
 							onClick={() => {
 								window.scrollTo(0, 0);
 								window.location.reload();
