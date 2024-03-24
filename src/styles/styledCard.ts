@@ -43,9 +43,17 @@ export const Image = styled.img`
 export const Text = styled.p`
 	text-align: left;
 	font-weight: 600;
-	line-height: 1.5rem;
 	margin: 1rem;
-	font-size: 0.9rem;
+	line-height: 1.5rem;
+	font-size: 1rem;
+	text-transform: uppercase;
+`;
+
+export const Price = styled.p`
+	text-align: left;
+	font-weight: 600;
+	margin: 1rem;
+	font-size: 1.2rem;
 `;
 
 export const Button = styled.button`
