@@ -9,69 +9,77 @@ import {
 	Button,
 } from '../styles/styledProducts';
 import { NavLink } from 'react-router-dom';
-import prueba from '../assets/Prueba.jpg';
+import bag from '../assets/Reusable-cloth-bag.webp';
+import glass from '../assets/Recycled-glass-vase.webp';
+import utensils from '../assets/Biodegradable-kitchen-utensils-set.webp';
+import bottle from '../assets/Reusable-1L-water-bottle.webp';
+import wooden from '../assets/wooden-cutlery.webp';
+import paper from '../assets/Recycled-paper-towel.webp';
+import basket from '../assets/Wicker-basket.webp';
+import led from '../assets/Bamboo-LED-Lamp.webp';
+import bin from '../assets/Compost-bin.webp';
 
 const products: ProductsCards[] = [
 	{
 		id: '1',
-		image: prueba,
-		text: 'Bolsa reutilizable de tela',
+		image: bag,
+		text: 'Reusable cloth bag',
 		price: 15,
 		quantity: 1,
 	},
 	{
 		id: '2',
-		image: prueba,
-		text: 'Jarrón de vidrio reciclado',
+		image: glass,
+		text: 'Recycled glass vase',
 		price: 30,
 		quantity: 1,
 	},
 	{
 		id: '3',
-		image: prueba,
-		text: 'Set de utensilios de cocina biodegradables',
+		image: utensils,
+		text: 'Biodegradable kitchen utensils set',
 		price: 25,
 		quantity: 1,
 	},
 	{
 		id: '4',
-		image: prueba,
-		text: 'Botella de agua de 1L reutilizable',
+		image: bottle,
+		text: 'Reusable 1L water bottle',
 		price: 10,
 		quantity: 1,
 	},
 	{
 		id: '5',
-		image: prueba,
-		text: 'Cubiertos de madera',
+		image: wooden,
+		text: 'Wooden cutlery',
 		price: 20,
 		quantity: 1,
 	},
 	{
 		id: '6',
-		image: prueba,
-		text: 'Toalla de papel reciclado',
+		image: paper,
+		text: 'Recycled paper towel',
 		price: 5,
 		quantity: 1,
 	},
 	{
 		id: '7',
-		image: prueba,
-		text: 'Cesta de mimbre',
+		image: basket,
+		text: 'Wicker basket',
 		price: 12,
 		quantity: 1,
 	},
 	{
 		id: '8',
-		image: prueba,
-		text: 'Lámpara LED de bambú',
+		image: led,
+		text: 'Bamboo LED Lamp',
 		price: 45,
 		quantity: 1,
 	},
 	{
 		id: '9',
-		image: prueba,
-		text: 'Cubeta de compostaje',
+		image: bin,
+		text: 'Compost bin',
 		price: 22,
 		quantity: 1,
 	},

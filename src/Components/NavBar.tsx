@@ -215,7 +215,12 @@ const Navbar = () => {
 					</button>
 				</div>
 			</Desktop>
-			{isShoppingCartOpen && <ShoppingCart />}
+			{isShoppingCartOpen && (
+				<ShoppingCart
+					isOpen={isShoppingCartOpen}
+					setIsShoppingCartOpen={setIsShoppingCartOpen}
+				/>
+			)}
 		</div>
 	);
 };
