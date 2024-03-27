@@ -16,11 +16,17 @@ import {
 	InnerContainerDesktop,
 	LogoImage,
 } from '../styles/styledNavbar';
+import ShoppingCart from './ShoppingCart';
+import Cart from '../assets/cart.svg';
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const navRef = useRef<HTMLDivElement | null>(null);
+	const [isShoppingCartOpen, setIsShoppingCartOpen] = useState(false);
 
+	const handleShoppingCart = () => {
+		setIsShoppingCartOpen(!isShoppingCartOpen);
+	};
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen);
 	};
@@ -46,12 +52,23 @@ const Navbar = () => {
 		<div ref={navRef}>
 			<ContainerGeneral>
 				<InnerContainer>
-					<div className='background'>
-						<button className='menu__icon' onClick={toggleMenu}>
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
+					<div className='container-mobile-buttons'>
+						<div className='background'>
+							<button className='menu__icon' onClick={toggleMenu}>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div className='container-cart'>
+							<button className='cart__icon' onClick={handleShoppingCart}>
+								<img
+									src={Cart}
+									alt='cart icon'
+									style={{ width: '100%', height: 'auto' }}
+								/>
+							</button>
+						</div>
 					</div>
 					{isMenuOpen && (
 						<DrawerContainer>
@@ -188,7 +205,22 @@ const Navbar = () => {
 						</Links>
 					</ContainerLinks>
 				</InnerContainerDesktop>
+				<div className='container-cart'>
+					<button className='cart__icon' onClick={handleShoppingCart}>
+						<img
+							src={Cart}
+							alt='cart icon'
+							style={{ width: '100%', height: 'auto' }}
+						/>
+					</button>
+				</div>
 			</Desktop>
+			{isShoppingCartOpen && (
+				<ShoppingCart
+					isOpen={isShoppingCartOpen}
+					setIsShoppingCartOpen={setIsShoppingCartOpen}
+				/>
+			)}
 		</div>
 	);
 };

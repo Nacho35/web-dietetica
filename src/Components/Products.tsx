@@ -1,5 +1,6 @@
 import Card from './Card';
 import { ProductsCards } from '../interfaces/interfaceCard';
+import { useCart } from 'react-use-cart';
 import {
 	Container,
 	ProductsContainer,
@@ -8,35 +9,98 @@ import {
 	Button,
 } from '../styles/styledProducts';
 import { NavLink } from 'react-router-dom';
-import prueba from '../assets/Prueba.jpg';
+import bag from '../assets/Reusable-cloth-bag.webp';
+import glass from '../assets/Recycled-glass-vase.webp';
+import utensils from '../assets/Biodegradable-kitchen-utensils-set.webp';
+import bottle from '../assets/Reusable-1L-water-bottle.webp';
+import wooden from '../assets/wooden-cutlery.webp';
+import paper from '../assets/Recycled-paper-towel.webp';
+import basket from '../assets/Wicker-basket.webp';
+import led from '../assets/Bamboo-LED-Lamp.webp';
+import bin from '../assets/Compost-bin.webp';
 
 const products: ProductsCards[] = [
 	{
-		image: prueba,
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla porttitor enim, at pulvinar risus bibendum sit amet. Aenean sed elit nec mauris pellentesque feugiat. Etiam vitae mi sed dolor posuere maximus. Aenean blandit vestibulum',
+		id: '1',
+		image: bag,
+		text: 'Reusable cloth bag',
+		price: 15,
+		quantity: 1,
 	},
 	{
-		image: prueba,
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla porttitor enim, at pulvinar risus bibendum sit amet. Aenean sed elit nec mauris pellentesque feugiat. Etiam vitae mi sed dolor posuere maximus. Aenean blandit vestibulum',
+		id: '2',
+		image: glass,
+		text: 'Recycled glass vase',
+		price: 30,
+		quantity: 1,
 	},
 	{
-		image: prueba,
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla porttitor enim, at pulvinar risus bibendum sit amet. Aenean sed elit nec mauris pellentesque feugiat. Etiam vitae mi sed dolor posuere maximus. Aenean blandit vestibulum',
+		id: '3',
+		image: utensils,
+		text: 'Biodegradable kitchen utensils set',
+		price: 25,
+		quantity: 1,
 	},
 	{
-		image: prueba,
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla porttitor enim, at pulvinar risus bibendum sit amet. Aenean sed elit nec mauris pellentesque feugiat. Etiam vitae mi sed dolor posuere maximus. Aenean blandit vestibulum',
+		id: '4',
+		image: bottle,
+		text: 'Reusable 1L water bottle',
+		price: 10,
+		quantity: 1,
 	},
 	{
-		image: prueba,
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla porttitor enim, at pulvinar risus bibendum sit amet. Aenean sed elit nec mauris pellentesque feugiat. Etiam vitae mi sed dolor posuere maximus. Aenean blandit vestibulum',
+		id: '5',
+		image: wooden,
+		text: 'Wooden cutlery',
+		price: 20,
+		quantity: 1,
 	},
 	{
-		image: prueba,
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla porttitor enim, at pulvinar risus bibendum sit amet. Aenean sed elit nec mauris pellentesque feugiat. Etiam vitae mi sed dolor posuere maximus. Aenean blandit vestibulum',
+		id: '6',
+		image: paper,
+		text: 'Recycled paper towel',
+		price: 5,
+		quantity: 1,
+	},
+	{
+		id: '7',
+		image: basket,
+		text: 'Wicker basket',
+		price: 12,
+		quantity: 1,
+	},
+	{
+		id: '8',
+		image: led,
+		text: 'Bamboo LED Lamp',
+		price: 45,
+		quantity: 1,
+	},
+	{
+		id: '9',
+		image: bin,
+		text: 'Compost bin',
+		price: 22,
+		quantity: 1,
 	},
 ];
 const Products = () => {
+	const { addItem } = useCart();
+
+	const addToCart = (id: string) => {
+		const product = products.find(p => p.id === id);
+		if (product) {
+			const item = {
+				id: product.id,
+				image: product.image,
+				name: product.text,
+				price: product.price,
+				quantity: product.quantity,
+			};
+			addItem(item);
+		}
+	};
+
 	return (
 		<Container>
 			<TitleContainer>
@@ -44,7 +108,14 @@ const Products = () => {
 			</TitleContainer>
 			<ProductsContainer>
 				{products.map((product, index) => (
-					<Card key={index} image={product.image} text={product.text} />
+					<Card
+						key={index}
+						id={product.id}
+						image={product.image}
+						text={product.text}
+						price={product.price}
+						addToCart={addToCart}
+					/>
 				))}
 			</ProductsContainer>
 			<Button as={NavLink} to='/'>

@@ -63,7 +63,7 @@ export const DrawerContainer = styled.div`
 	height: 100%;
 	position: fixed;
 	top: 0;
-	right: 0;
+	left: 0;
 	z-index: 9999;
 	overflow-x: hidden;
 	transition: 10s;
