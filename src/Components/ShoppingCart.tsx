@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import {
 	Container,
 	CartItem,
@@ -23,8 +23,10 @@ import {
 } from '../styles/styledCart';
 import { useCart } from 'react-use-cart';
 import { ShoppingCartProps } from '../interfaces/interfaceShoppingCart';
+import CheckoutModal from './CheckoutModal';
 
 const ShoppingCart = ({ isOpen, setIsShoppingCartOpen }: ShoppingCartProps) => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
 	const cartRef = useRef<HTMLDivElement>(null);
 	const {
 		items,
@@ -55,6 +57,14 @@ const ShoppingCart = ({ isOpen, setIsShoppingCartOpen }: ShoppingCartProps) => {
 		if (item && (item.quantity ?? 0) > 1) {
 			updateItemQuantity(id, (item.quantity ?? 0) - 1);
 		}
+	};
+
+	const handleOpenModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
 	};
 
 	useEffect(() => {
@@ -127,13 +137,16 @@ const ShoppingCart = ({ isOpen, setIsShoppingCartOpen }: ShoppingCartProps) => {
 				)}
 				<ContainerButtons>
 					<CartButtons onClick={handleClearCart}>Clear</CartButtons>
-					<CartButtons>Checkout</CartButtons>
+					<CartButtons onClick={handleOpenModal}>Checkout</CartButtons>
 				</ContainerButtons>
+				<CheckoutModal
+					isOpen={isModalOpen}
+					onClose={handleCloseModal}
+					cartItems={items}
+				/>
 			</DrawerContainer>
 		</Container>
 	);
 };
 
 export default ShoppingCart;
-
-// TODO - Cree un ticket para el botón de checkout.
