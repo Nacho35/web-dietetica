@@ -8,6 +8,7 @@ export const Container = styled.div`
 	flex-direction: column;
 	width: 100%;
 	background-color: ${theme.colors.colorFive};
+	cursor: default;
 `;
 
 export const TitleContainer = styled.div`

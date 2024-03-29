@@ -11,12 +11,6 @@ export const Container = styled.div`
 	top: 0;
 	left: 0;
 	z-index: 9999;
-	overflow-x: hidden;
-	transition: 10s;
-	background: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(10px);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
 `;
 
 export const InnerContainer = styled.div`
@@ -24,21 +18,29 @@ export const InnerContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	padding: 1rem;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: ${theme.colors.colorHeight};
 	border-radius: 10px;
 	margin: auto;
-	width: 80%;
+	width: fit-content;
+	overflow: auto;
+	max-height: 80vh;
 `;
 
 export const Title = styled.h2`
 	text-align: center;
 	align-self: center;
-	padding: 1rem;
 	font-size: 20px;
 	border-radius: 10px;
 	margin-bottom: 1rem;
 	font-weight: 600;
 	text-transform: uppercase;
+	cursor: default;
+	color: ${theme.colors.colorSeven};
+`;
+
+export const ContainerHeigth = styled.div`
+	overflow: auto;
+	max-height: 80vh;
 `;
 
 export const ContainerItems = styled.div`
@@ -47,6 +49,7 @@ export const ContainerItems = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin: 1rem;
+	cursor: default;
 `;
 
 export const Info = styled.div`
@@ -68,10 +71,10 @@ export const Name = styled.span`
 	text-transform: uppercase;
 	font-weight: 600;
 	text-align: center;
-	color: ${theme.colors.colorHeight};
+	color: ${theme.colors.colorSeven};
 `;
 
-export const Price = styled.span`
+export const PriceAndQuantity = styled.span`
 	font-size: 1.1rem;
 	font-weight: 600;
 	text-align: center;
@@ -81,21 +84,7 @@ export const Price = styled.span`
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
 	padding: 1rem;
-	color: ${theme.colors.colorHeight};
-`;
-
-export const Quantity = styled.span`
-	font-size: 1.1rem;
-	text-transform: uppercase;
-	font-weight: 600;
-	text-align: center;
-	margin: 5px;
-	background: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(10px);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
-	padding: 1rem;
-	color: ${theme.colors.colorHeight};
+	color: ${theme.colors.colorSeven};
 `;
 
 export const Total = styled.p`
@@ -104,7 +93,8 @@ export const Total = styled.p`
 	font-weight: 600;
 	text-align: center;
 	margin: 10px;
-	color: ${theme.colors.colorHeight};
+	color: ${theme.colors.colorSeven};
+	cursor: default;
 `;
 
 export const ContainerButtons = styled.div`
@@ -113,19 +103,31 @@ export const ContainerButtons = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin: 1.1rem auto 1.1rem auto;
 	order: 2;
 	margin-top: auto;
 `;
 
 export const Button = styled.button`
-	font-size: 1rem;
+	align-self: center;
+	width: fit-content;
 	font-weight: 600;
+	position: relative;
+	display: inline-block;
+	margin: 15px;
+	padding: 15px 30px;
 	text-align: center;
-	margin: 10px;
-	color: ${theme.colors.colorHeight};
-	padding: 0.5rem;
-	border-radius: 10px;
-	border: none;
+	font-size: 10px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: ${theme.colors.colorSeven};
 	cursor: pointer;
+	transition: ease-out 0.5s;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	&:active {
+		transform: scale(0.9);
+	}
 `;

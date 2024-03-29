@@ -1,7 +1,7 @@
 export interface CheckoutModalProps {
 	isOpen: boolean;
 	onClose: () => void;
-	cartItems: CartItem[];
+	cartItems: any[];
 }
 
 export interface CartItem {

@@ -7,6 +7,7 @@ import {
 	Text,
 	Button,
 	Price,
+	ContainerImage,
 } from '../styles/styledCard';
 
 const Card = ({ image, text, price, addToCart, id }: CardProps) => {
@@ -14,12 +15,14 @@ const Card = ({ image, text, price, addToCart, id }: CardProps) => {
 		<Container>
 			<SecondContainer>
 				<InnerContainer>
-					<Image src={image} alt={text} />
+					<ContainerImage>
+						<Image src={image} alt={text} />
+					</ContainerImage>
 					<Text>{text}</Text>
 					<Price>${price}</Price>
+					<Button onClick={() => addToCart(id)}>Add to Cart</Button>
 				</InnerContainer>
 			</SecondContainer>
-			<Button onClick={() => addToCart(id)}>Add to Cart</Button>
 		</Container>
 	);
 };

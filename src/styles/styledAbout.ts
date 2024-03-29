@@ -8,6 +8,7 @@ export const MainContainer = styled.div`
 	background-color: ${theme.colors.colorTwo};
 	object-fit: cover;
 	object-position: center;
+	cursor: default;
 
 	@media only screen and (width >= 768px) {
 		display: grid;

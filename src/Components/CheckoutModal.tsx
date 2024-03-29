@@ -8,10 +8,10 @@ import {
 	Total,
 	Button,
 	ContainerButtons,
-	Price,
-	Quantity,
+	PriceAndQuantity,
 	Name,
 	ContainerName,
+	ContainerHeigth,
 } from '../styles/styledModal';
 
 const CheckoutModal = ({ isOpen, onClose, cartItems }: CheckoutModalProps) => {
@@ -24,17 +24,20 @@ const CheckoutModal = ({ isOpen, onClose, cartItems }: CheckoutModalProps) => {
 		<Container>
 			<InnerContainer>
 				<Title>Ticket</Title>
-				{cartItems.map(item => (
-					<ContainerItems key={item.id}>
-						<ContainerName>
-							<Name>{item.name}</Name>
-						</ContainerName>
-						<Info>
-							<Price>${item.price}</Price>
-							<Quantity>x{item.quantity}</Quantity>
-						</Info>
-					</ContainerItems>
-				))}
+				<ContainerHeigth className='no-scroll'>
+					{cartItems.map(item => (
+						<ContainerItems key={item.id}>
+							<ContainerName>
+								<Name>{item.name}</Name>
+							</ContainerName>
+							<Info>
+								<PriceAndQuantity>
+									${item.price} x {item.quantity}
+								</PriceAndQuantity>
+							</Info>
+						</ContainerItems>
+					))}
+				</ContainerHeigth>
 				<Total>Total: ${total(cartItems).toFixed(2)}</Total>
 				<ContainerButtons>
 					<Button onClick={onClose}>Close</Button>
@@ -47,8 +50,4 @@ const CheckoutModal = ({ isOpen, onClose, cartItems }: CheckoutModalProps) => {
 
 export default CheckoutModal;
 
-// TODO  TERMINAR ESTILOS PARA EL MODAL
-// TODO  COLOCAR EL COLOR CORRESPONDIENTE A LOS BOTONES DEL CARRITO COMO EN AUMENTAR Y DISMINUIR CANTIDAD Y AL BOTON REMOVE DE LOS PRODUCTOS
-// TODO  COLOCAR UN RELLENO A LA CANTIDAD DE CADA PRODUCTO Y AL PRECIO
 // TODO  AGREGAR UNA FUNCION DE PAGAR INTEGRANDO UNA API
-// TODO  VER SI HAY UNA FUENTE DE TEXTO MEJOR PARA EL SITIO !!!

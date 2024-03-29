@@ -8,6 +8,7 @@ export const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-color: ${theme.colors.colorOne};
+	cursor: default;
 `;
 
 export const GridContainer = styled.div`

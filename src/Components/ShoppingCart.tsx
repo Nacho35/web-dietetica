@@ -86,7 +86,7 @@ const ShoppingCart = ({ isOpen, setIsShoppingCartOpen }: ShoppingCartProps) => {
 
 	return (
 		<Container ref={cartRef}>
-			<DrawerContainer>
+			<DrawerContainer className='no-scroll'>
 				<TitleContainer>
 					<Title>My Cart</Title>
 				</TitleContainer>
@@ -105,7 +105,7 @@ const ShoppingCart = ({ isOpen, setIsShoppingCartOpen }: ShoppingCartProps) => {
 										<ContainerData>
 											{item.name}
 											<QuantityAndPriceContainer>
-												${item.price} - x{item.quantity}
+												${item.price} x {item.quantity}
 											</QuantityAndPriceContainer>
 										</ContainerData>
 									</ContainerImage>
@@ -113,11 +113,13 @@ const ShoppingCart = ({ isOpen, setIsShoppingCartOpen }: ShoppingCartProps) => {
 								<ContainerQuantity>
 									<CartButtonsQuantity
 										onClick={() => handleDecreaseQuantity(item.id)}
+										color='rgba(255, 0, 0, 0.2)'
 									>
 										-
 									</CartButtonsQuantity>
 									<CartButtonsQuantity
 										onClick={() => handleIncreaseQuantity(item.id)}
+										color='rgba(0, 255, 0, 0.2)'
 									>
 										+
 									</CartButtonsQuantity>
@@ -139,12 +141,12 @@ const ShoppingCart = ({ isOpen, setIsShoppingCartOpen }: ShoppingCartProps) => {
 					<CartButtons onClick={handleClearCart}>Clear</CartButtons>
 					<CartButtons onClick={handleOpenModal}>Checkout</CartButtons>
 				</ContainerButtons>
-				<CheckoutModal
-					isOpen={isModalOpen}
-					onClose={handleCloseModal}
-					cartItems={items}
-				/>
 			</DrawerContainer>
+			<CheckoutModal
+				isOpen={isModalOpen}
+				onClose={handleCloseModal}
+				cartItems={items}
+			/>
 		</Container>
 	);
 };

@@ -9,6 +9,7 @@ export const FooterContainer = styled.footer`
 	text-align: center;
 	background-color: ${theme.colors.colorTree};
 	margin: auto;
+	cursor: default;
 `;
 
 export const InfoContainer = styled.div`

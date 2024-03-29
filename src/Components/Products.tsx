@@ -37,7 +37,7 @@ const products: ProductsCards[] = [
 	{
 		id: '3',
 		image: utensils,
-		text: 'Biodegradable kitchen utensils set',
+		text: 'Biodegradable kitchen set',
 		price: 25,
 		quantity: 1,
 	},

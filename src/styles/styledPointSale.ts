@@ -7,6 +7,7 @@ export const MainContainer = styled.div`
 	justify-content: center;
 	width: 100%;
 	background-color: ${theme.colors.colorNine};
+	cursor: default;
 `;
 
 export const InnerContainer = styled.div`

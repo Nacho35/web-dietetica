@@ -21,8 +21,6 @@ export const InnerContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	border-radius: 10px;
-	padding: 1.25rem;
-	width: 300px;
 	margin: auto;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -33,15 +31,23 @@ export const InnerContainer = styled.div`
 	-moz-box-shadow: 10px 10px 10px 1px rgba(67, 67, 66, 0.74);
 `;
 
+export const ContainerImage = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+`;
+
 export const Image = styled.img`
 	object-fit: cover;
 	object-position: center;
-	margin: 5px;
-	border-radius: 10px;
+	border-radius: 10px 10px 0 0;
+	width: 100%;
+	height: 100%;
 `;
 
 export const Text = styled.p`
-	text-align: left;
+	text-align: center;
 	font-weight: 600;
 	margin: 1rem;
 	line-height: 1.5rem;
@@ -50,7 +56,7 @@ export const Text = styled.p`
 `;
 
 export const Price = styled.p`
-	text-align: left;
+	text-align: center;
 	font-weight: 600;
 	margin: 1rem;
 	font-size: 1.2rem;
