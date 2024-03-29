@@ -7,6 +7,7 @@ export const SecondBannerContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
+	cursor: default;
 `;
 
 export const BannerContent = styled.div`

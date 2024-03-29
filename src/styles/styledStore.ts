@@ -8,6 +8,7 @@ export const Container = styled.div`
 	justify-content: center;
 	width: 100%;
 	background-color: ${theme.colors.colorFive};
+	cursor: default;
 `;
 
 export const ContainerTitle = styled.div`

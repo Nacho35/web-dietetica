@@ -8,6 +8,7 @@ export const MainContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-color: ${theme.colors.colorFour};
+	cursor: default;
 `;
 
 export const InfoContainer = styled.div`

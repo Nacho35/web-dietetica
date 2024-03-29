@@ -146,6 +146,7 @@ export const ContainerImage = styled.div`
 	align-items: center;
 	margin: auto;
 	width: 90%;
+	cursor: default;
 `;
 
 export const ContainerData = styled.div`
@@ -163,6 +164,11 @@ export const QuantityAndPriceContainer = styled.div`
 	text-align: center;
 	margin: 10px;
 	color: ${theme.colors.colorHeight};
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	padding: 1rem;
 `;
 
 export const CartImage = styled.img`
@@ -170,6 +176,7 @@ export const CartImage = styled.img`
 	height: 150px;
 	margin: 10px;
 	border-radius: 10px;
+	object-fit: cover;
 `;
 
 export const CartInfo = styled.div`
@@ -207,7 +214,7 @@ export const CartButtonsQuantity = styled.button`
 	cursor: pointer;
 	transition: ease-out 0.5s;
 	border-radius: 10px;
-	background: rgba(255, 255, 255, 0.2);
+	background: ${props => props.color || 'rgba(0, 255, 0, 0.2)'};
 	backdrop-filter: blur(10px);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -227,6 +234,7 @@ export const ContainerTotalCart = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	cursor: default;
 `;
 
 export const InfoTotalCart = styled.p`
