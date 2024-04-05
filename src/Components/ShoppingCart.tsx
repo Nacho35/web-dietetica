@@ -105,7 +105,7 @@ const ShoppingCart = ({ isOpen, setIsShoppingCartOpen }: ShoppingCartProps) => {
 										<ContainerData>
 											{item.name}
 											<QuantityAndPriceContainer>
-												${item.price} x {item.quantity}
+												${item.price.toFixed(2)} x {item.quantity}
 											</QuantityAndPriceContainer>
 										</ContainerData>
 									</ContainerImage>

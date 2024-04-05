@@ -207,7 +207,7 @@ export const CartButtonsQuantity = styled.button`
 	margin: 15px;
 	padding: 15px 30px;
 	text-align: center;
-	font-size: 10px;
+	font-size: 16px;
 	letter-spacing: 1px;
 	text-decoration: none;
 	color: ${theme.colors.colorHeight};
