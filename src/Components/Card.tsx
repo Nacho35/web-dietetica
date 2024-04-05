@@ -19,7 +19,7 @@ const Card = ({ image, text, price, addToCart, id }: CardProps) => {
 						<Image src={image} alt={text} />
 					</ContainerImage>
 					<Text>{text}</Text>
-					<Price>${price}</Price>
+					<Price>${Number(price).toFixed(2)}</Price>
 					<Button onClick={() => addToCart(id)}>Add to Cart</Button>
 				</InnerContainer>
 			</SecondContainer>
