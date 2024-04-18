@@ -31,7 +31,7 @@ const Bot = () => {
 				useSessionStorage: true,
 				enableConversationDeletion: true,
 				stylesheet:
-					'https://webchat-styler-css.botpress.app/prod/code/532519c5-4c11-428c-9ba1-6b4405c1305b/v85253/style.css',
+					'https://webchat-styler-css.botpress.app/prod/code/532519c5-4c11-428c-9ba1-6b4405c1305b/v12612/style.css',
 			});
 			console.log('Botpress script loaded successfully');
 		};
