@@ -14,7 +14,7 @@ import bag from '../assets/Reusable-cloth-bag.webp';
 import glass from '../assets/Recycled-glass-vase.webp';
 import utensils from '../assets/Biodegradable-kitchen-utensils-set.webp';
 import bottle from '../assets/Reusable-1L-water-bottle.webp';
-import wooden from '../assets/wooden-cutlery.webp';
+import wooden from '../assets/Wooden-cutlery.webp';
 import paper from '../assets/Recycled-paper-towel.webp';
 import basket from '../assets/Wicker-basket.webp';
 import led from '../assets/Bamboo-LED-Lamp.webp';

@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Index from '../index';
-import About from '../components/About';
-import PointSale from '../components/PointSale';
-import Store from '../components/Store';
-import ZeroWaste from '../components/ZeroWaste';
-import InfoWaste from '../components/InfoWaste';
-import ScrollToTop from '../components/ScrollRoute';
-import Products from '../components/Products';
-import LayoutWithFooter from '../components/LayoutWithFooter ';
-import Footer from '../components/Footer';
+import About from '../Components/About';
+import PointSale from '../Components/PointSale';
+import Store from '../Components/Store';
+import ZeroWaste from '../Components/ZeroWaste';
+import InfoWaste from '../Components/InfoWaste';
+import ScrollToTop from '../Components/ScrollRoute';
+import Products from '../Components/Products';
+import LayoutWithFooter from '../Components/LayoutWithFooter ';
+import Footer from '../Components/Footer';
 
 const RouterIndex = () => {
 	return (
