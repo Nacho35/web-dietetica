@@ -59,6 +59,9 @@ export const MainContainerMap = styled.div`
 `;
 
 export const MapContainer = styled.div`
+	position: relative;
+	z-index: 0;
+
 	@media only screen and (width >= 768px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;

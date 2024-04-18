@@ -113,6 +113,11 @@ export const LogoLink = styled(ScrollLink)`
 
 export const LogoImage = styled.img`
 	width: 10%;
+
+	&:hover {
+		transform: scale(1.1);
+		transition: all 0.5s ease-in-out;
+	}
 `;
 
 export const ContainerLinks = styled.div`
@@ -134,6 +139,8 @@ export const Links = styled(ScrollLink)`
 
 	&:hover {
 		color: ${theme.colors.colorOne};
+		transform: scale(1.2);
+		transition: all 0.5s ease-in-out;
 	}
 
 	@media only screen and (min-width: 1300px) and (max-width: 1400px) {

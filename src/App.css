@@ -150,6 +150,11 @@ button {
   justify-content: center;
   align-items: center;
 
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
   @media only screen and (width >=1200px) {
     display: flex;
     justify-content: center;
