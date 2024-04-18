@@ -13,7 +13,7 @@ import { ToastContainer } from 'react-toastify';
 
 const clientId = import.meta.env.VITE_PAYPAL_CLIENT_ID;
 if (!clientId) {
-	throw new Error('VITE_PAYPAL_CLIENT_ID no está definido en el archivo .env');
+	throw new Error('VITE_PAYPAL_CLIENT_ID is not defined in the .env file');
 }
 
 const initialOptions = {

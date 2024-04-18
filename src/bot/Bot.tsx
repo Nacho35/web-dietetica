@@ -25,13 +25,13 @@ const Bot = () => {
 				hostUrl: 'https://cdn.botpress.cloud/webchat/v1',
 				messagingUrl: 'https://messaging.botpress.cloud',
 				botName: 'Clara',
+				showPoweredBy: true,
 				webhookId: webhookId,
 				lazySocket: true,
 				useSessionStorage: true,
 				enableConversationDeletion: true,
-				hideWidget: true,
-				disableAnimations: false,
-				stylesheet: 'https://webchat-styler-css.botpress.app/prod/532519c5-4',
+				stylesheet:
+					'https://webchat-styler-css.botpress.app/prod/code/532519c5-4c11-428c-9ba1-6b4405c1305b/v85253/style.css',
 			});
 			console.log('Botpress script loaded successfully');
 		};
