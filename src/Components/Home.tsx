@@ -15,6 +15,7 @@ import {
 	Title,
 	Text,
 } from '../styles/styledHome';
+import Bot from '../bot/Bot';
 
 const NextArrow = (props: any) => (
 	<div className='arrow-left' onClick={props.onClick}>
@@ -80,6 +81,7 @@ const Home = ({ id = 'home' }) => {
 					</Item>
 				))}
 			</Slider>
+			<Bot />
 		</Container>
 	);
 };
