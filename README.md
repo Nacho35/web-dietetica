@@ -1,4 +1,4 @@
-# Documentación del Proyecto Web Dietética
+# Proyecto Web Dietética
 
 ## Descripción del Proyecto
 
